@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Account Balance {% endblock %}</h1>
+    {% for acc in accounts_old %}
+        <div class='acc'>
+            <h3>#{{ acc[0] }} - {{ acc[1] }} - CURRENT BALANCE: {{ acc[2] }}</h3>
+            <i><p>({{ acc[3] }} PREVIOUS BALANCE)</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
